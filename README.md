@@ -47,18 +47,17 @@ spring.datasource.username=root
 spring.datasource.password=your_password
 
 ```
-![Diagramme de Cas d'Utilisation]
+### Diagramme de Cas d'Utilisation
 
 ![img_1.png](img_1.png)
 
-![Diagramme de Classes]
+### Diagramme de Classes
 
 ![img.png](img.png)
 
-![Diagramme de Séquence]
+### Diagramme de Séquence
 
 -🎯 Scénario : Un client s’inscrit sur la plateforme
-![SequenceDiagram1.png]
 
 ![img_2.png](img_2.png)
 
