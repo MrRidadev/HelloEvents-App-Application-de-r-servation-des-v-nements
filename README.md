@@ -2,7 +2,7 @@
 
 Application Web de réservation d’événements développée en Java avec Spring Boot. Le projet répond à des exigences fonctionnelles spécifiques pour deux profils : **clients** et **administrateurs**.
 
----
+
 
 ## 🧰 Technologies Utilisées
 
@@ -15,7 +15,7 @@ Application Web de réservation d’événements développée en Java avec Sprin
 - JUnit
 - Maven
 
----
+
 
 ## 🚀 Fonctionnalités Principales
 
@@ -32,7 +32,7 @@ Application Web de réservation d’événements développée en Java avec Sprin
 - 👥 Gestion des comptes clients
 - 📅 Gestion complète des événements
 
----
+
 
 ## ⚙️ Installation & Lancement
 
@@ -48,10 +48,17 @@ spring.datasource.password=your_password
 
 ```
 ![Diagramme de Cas d'Utilisation]
+
 ![img_1.png](img_1.png)
+
 ![Diagramme de Classes]
+
 ![img.png](img.png)
+
 ![Diagramme de Séquence]
+
 -🎯 Scénario : Un client s’inscrit sur la plateforme
-![SequenceDiagram1.png](../../../SequenceDiagram1.png)
+![SequenceDiagram1.png]
+
+![img_2.png](img_2.png)
 
