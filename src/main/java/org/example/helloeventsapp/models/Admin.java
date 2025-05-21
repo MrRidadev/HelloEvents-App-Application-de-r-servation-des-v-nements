@@ -1,4 +1,8 @@
 package org.example.helloeventsapp.models;
 
-public class Admin {
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Admin extends Utilisateur {
 }
