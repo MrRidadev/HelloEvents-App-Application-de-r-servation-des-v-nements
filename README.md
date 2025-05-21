@@ -38,7 +38,7 @@ Application Web de réservation d’événements développée en Java avec Sprin
 
 ```bash
 # Cloner le projet
-git clone https://github.com/votre-utilisateur/event-booking-app.git
+git clone https://github.com/MrRidadev/HelloEvents-App-Application-de-r-servation-des-v-nements.git
 cd HelloEvents App
 
 # Configuration de la base de données (src/main/resources/application.properties)
