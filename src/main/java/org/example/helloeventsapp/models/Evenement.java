@@ -1,9 +1,6 @@
 package org.example.helloeventsapp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
@@ -19,7 +16,10 @@ public class Evenement {
     private String description;
     private String date;
     private String lieu;
-    private String categorie;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Categorie categorie;
 
     @OneToMany(mappedBy = "evenement")
     private List<Reservation> reservations;
@@ -65,13 +65,7 @@ public class Evenement {
         this.lieu = lieu;
     }
 
-    public String getCategorie() {
-        return categorie;
-    }
 
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
-    }
 
     public List<Reservation> getReservations() {
         return reservations;
@@ -81,5 +75,11 @@ public class Evenement {
         this.reservations = reservations;
     }
 
+    public Categorie getCategorie() {
+        return categorie;
+    }
 
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
 }
