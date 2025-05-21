@@ -1,9 +1,6 @@
 package org.example.helloeventsapp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
 @Entity
@@ -16,7 +13,10 @@ public abstract class Utilisateur {
     private String nom;
     private String email;
     private String modPass;
-    private String role;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;
 
     public void setId(Long id) {
         this.id = id;
@@ -50,11 +50,11 @@ public abstract class Utilisateur {
         this.modPass = modPass;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 }
