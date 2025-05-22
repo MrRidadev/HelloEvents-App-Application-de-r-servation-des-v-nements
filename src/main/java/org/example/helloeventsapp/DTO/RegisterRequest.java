@@ -10,9 +10,6 @@ public class RegisterRequest {
     private String nom;
 
     @NotBlank
-    private String prenom;
-
-    @NotBlank
     private String email;
 
     @NotBlank
@@ -24,9 +21,9 @@ public class RegisterRequest {
     public RegisterRequest() {
     }
 
-    public RegisterRequest(String nom, String prenom, String email,String password,  Role role) {
+    public RegisterRequest(String nom, String email,String password,  Role role) {
         this.nom = nom;
-        this.prenom = prenom;
+//        this.prenom = prenom;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -40,13 +37,6 @@ public class RegisterRequest {
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
 
     public String getEmail() {
         return email;
