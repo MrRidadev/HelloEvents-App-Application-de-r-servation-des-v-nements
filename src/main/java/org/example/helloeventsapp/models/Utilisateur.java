@@ -3,7 +3,6 @@ package org.example.helloeventsapp.models;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
-@Entity
 @MappedSuperclass
 public abstract class Utilisateur {
     @jakarta.persistence.Id
@@ -16,7 +15,7 @@ public abstract class Utilisateur {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role;
+    protected Role role;
 
     public void setId(Long id) {
         this.id = id;
