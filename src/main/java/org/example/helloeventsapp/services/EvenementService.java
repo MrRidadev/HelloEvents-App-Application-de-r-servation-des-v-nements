@@ -21,4 +21,8 @@ public class EvenementService {
     public List<Evenement> findAll() {
         return repo.findAll();
     }
+
+    public Evenement create(Evenement e) {
+        return repo.save(e);
+    }
 }
