@@ -25,4 +25,8 @@ public class EvenementService {
     public Evenement create(Evenement e) {
         return repo.save(e);
     }
+
+    public Evenement update(Evenement e) {
+        return repo.save(e);
+    }
 }

@@ -1,12 +1,12 @@
 package org.example.helloeventsapp.controllers;
 
+import org.example.helloeventsapp.models.Categorie;
 import org.example.helloeventsapp.models.Evenement;
 import org.example.helloeventsapp.services.EvenementService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -25,7 +25,26 @@ public class EvenementController {
     }
 
     @PostMapping("/create")
-    public Evenement ajouter(Evenement evenement) {
-        return evenementService.create(evenement);
+
+    public ResponseEntity<?> ajouter(@RequestBody Evenement evenement) {
+
+        System.out.println("[DEBUG] Catégorie reçue : " + evenement.getCategorie());
+
+        if (evenement.getCategorie() == null) {
+            System.out.println("[ERREUR] Catégorie est nulle ou invalide !");
+            return ResponseEntity
+                    .badRequest()
+                    .body("Erreur : la catégorie est invalide ou manquante. Valeurs possibles : " + Arrays.toString(Categorie.values()));
+        }
+
+        System.out.println("[INFO] Création de l'événement avec catégorie : " + evenement.getCategorie());
+        Evenement savedEvent = evenementService.create(evenement);
+        return ResponseEntity.ok(savedEvent);
     }
+
+    @PutMapping("/put")
+    public Evenement modification(@RequestBody Evenement evenement) {
+        return evenementService.update(evenement);
+    }
+
 }
