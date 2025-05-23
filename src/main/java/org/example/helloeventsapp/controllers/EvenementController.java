@@ -3,6 +3,7 @@ package org.example.helloeventsapp.controllers;
 import org.example.helloeventsapp.models.Evenement;
 import org.example.helloeventsapp.services.EvenementService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,10 @@ public class EvenementController {
     @GetMapping("/get")
     public List<Evenement> getEvenements() {
         return evenementService.findAll();
+    }
+
+    @PostMapping("/create")
+    public Evenement ajouter(Evenement evenement) {
+        return evenementService.create(evenement);
     }
 }
