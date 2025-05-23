@@ -47,4 +47,9 @@ public class EvenementController {
         return evenementService.update(evenement);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteEvenement(@PathVariable Long id) {
+        evenementService.delete(id);
+    }
+
 }

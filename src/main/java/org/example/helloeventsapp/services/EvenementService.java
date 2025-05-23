@@ -29,4 +29,8 @@ public class EvenementService {
     public Evenement update(Evenement e) {
         return repo.save(e);
     }
+
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }
