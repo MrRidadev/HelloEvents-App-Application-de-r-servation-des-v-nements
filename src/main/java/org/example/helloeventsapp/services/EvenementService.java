@@ -5,6 +5,7 @@ import org.example.helloeventsapp.repository.EvenementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -32,5 +33,9 @@ public class EvenementService {
 
     public void delete(Long id) {
         repo.deleteById(id);
+    }
+
+    public List<Evenement> findByDate(String date) {
+        return repo.findByDate(date);
     }
 }

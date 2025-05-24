@@ -2,10 +2,12 @@ package org.example.helloeventsapp.controllers;
 
 import org.example.helloeventsapp.models.Categorie;
 import org.example.helloeventsapp.models.Evenement;
+import org.example.helloeventsapp.repository.EvenementRepository;
 import org.example.helloeventsapp.services.EvenementService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -50,6 +52,11 @@ public class EvenementController {
     @DeleteMapping("/delete/{id}")
     public void deleteEvenement(@PathVariable Long id) {
         evenementService.delete(id);
+    }
+
+    @GetMapping("/serch/{date}")
+    public List<Evenement> findByDate(@PathVariable String date) {
+        return evenementService.findByDate(date);
     }
 
 }
