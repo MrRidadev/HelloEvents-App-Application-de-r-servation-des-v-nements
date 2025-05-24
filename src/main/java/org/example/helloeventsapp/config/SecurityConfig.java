@@ -31,7 +31,8 @@ public class SecurityConfig {
                         .requestMatchers("/auth/register", "/auth/login","/evenement/create",
                                 "/evenement/get","/evenement/put","/evenement/delete/**",
                                 "/client/All","/client/delete/**","/client/put",
-                                "/evenement/serch/**").permitAll()
+                                "/evenement/serch/**",
+                                "/reservation/ajouter","/reservation/getAll").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();
