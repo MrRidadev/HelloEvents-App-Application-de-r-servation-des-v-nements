@@ -30,7 +30,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/register", "/auth/login","/evenement/create",
                                 "/evenement/get","/evenement/put","/evenement/delete/**",
-                                "/client/All","/client/delete/**").permitAll()
+                                "/client/All","/client/delete/**","/client/put").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();

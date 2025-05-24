@@ -28,4 +28,9 @@ public class ClientController {
         clientService.deleteClient(id);
     }
 
+    @PutMapping("/put")
+    public Client putClient(@RequestBody Client client) {
+       return clientService.updateClients(client);
+    }
+
 }
