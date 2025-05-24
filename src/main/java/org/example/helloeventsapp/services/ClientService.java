@@ -20,4 +20,8 @@ public class ClientService {
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
+
+    public void deleteClient(long id) {
+        clientRepository.deleteById(id);
+    }
 }
