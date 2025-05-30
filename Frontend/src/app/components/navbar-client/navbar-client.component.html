@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand text-primary fw-bold fs-4" routerLink="/">
+      <i class="bi bi-camera-reels-fill me-1"></i> Eventify
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/" >Accueil</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark"  href="/evenement">Événements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/props">À Propos</a>
+        </li>
+      </ul>
+
+      <!-- Barre de recherche centrée -->
+      <form class="d-flex mx-auto search-bar">
+        <input class="form-control rounded-pill me-2 border-primary" type="search" placeholder="Rechercher un événement..."
+               aria-label="Search">
+        <button class="btn btn-primary rounded-pill px-4" type="submit">Rechercher</button>
+      </form>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-dark" routerLink="/login">
+            <i class="bi bi-box-arrow-in-right"></i> Connexion
+          </a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="btn btn-primary px-4 rounded-pill" routerLink="/register">
+            <i class="bi bi-person-plus-fill"></i> S'inscrire
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

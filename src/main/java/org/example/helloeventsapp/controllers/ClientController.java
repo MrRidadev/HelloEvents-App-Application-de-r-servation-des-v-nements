@@ -1,6 +1,7 @@
 package org.example.helloeventsapp.controllers;
 
 import org.example.helloeventsapp.models.Client;
+import org.example.helloeventsapp.models.Reservation;
 import org.example.helloeventsapp.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,11 @@ public class ClientController {
     @PutMapping("/put")
     public Client putClient(@RequestBody Client client) {
        return clientService.updateClients(client);
+    }
+
+    @GetMapping("/getReservationByNom/{nom}")
+    public List<Reservation> getReservationByNom(@PathVariable String nom) {
+        return clientService.findByReservation(nom);
     }
 
 }

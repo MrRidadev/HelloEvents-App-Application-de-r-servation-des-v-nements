@@ -32,7 +32,7 @@ public class SecurityConfig {
                                 "/evenement/get","/evenement/put","/evenement/delete/**",
                                 "/client/All","/client/delete/**","/client/put",
                                 "/evenement/serch/**",
-                                "/reservation/ajouter","/reservation/getAll").permitAll()
+                                "/reservation/ajouter","/reservation/getAll","/client/getReservationByNom/**").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();

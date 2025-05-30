@@ -1,0 +1,7 @@
+footer a:hover {
+  color: blue !important; /* Couleur d'accent rouge orangé */
+}
+
+footer .bi {
+  vertical-align: middle;
+}

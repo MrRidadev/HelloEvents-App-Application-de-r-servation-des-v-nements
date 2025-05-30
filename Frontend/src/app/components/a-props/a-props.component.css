@@ -1,0 +1,15 @@
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.text-primary {
+  color: #6f42c1 !important; /* Violet Bootstrap */
+}
+
+.bg-primary-subtle {
+  background-color: #e9d8fd !important;
+}
+
+.bi {
+  margin-right: 8px;
+}

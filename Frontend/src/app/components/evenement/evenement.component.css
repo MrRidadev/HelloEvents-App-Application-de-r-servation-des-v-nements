@@ -1,0 +1,28 @@
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card-title i {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  letter-spacing: 0.08em;
+}

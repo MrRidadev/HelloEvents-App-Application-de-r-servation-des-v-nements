@@ -1,0 +1,100 @@
+
+
+<!-- Sidebar -->
+<nav id="sidebar" class="d-flex flex-column">
+  <a href="#" class="navbar-brand text-white text-center mb-4 fs-4 fw-bold">
+    <i class="bi bi-speedometer2"></i> Admin Dashboard
+  </a>
+
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a href="#" class="nav-link active">
+        <i class="bi bi-bar-chart-line"></i> Tableau de Bord
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#clientsSubmenu" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+        <i class="bi bi-people"></i> Gestion des Comptes
+        <i class="bi bi-caret-down-fill float-end"></i>
+      </a>
+      <div class="collapse ps-3" id="clientsSubmenu">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Afficher Clients</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Supprimer Client</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#eventsSubmenu" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+        <i class="bi bi-calendar-event"></i> Gestion des Événements
+        <i class="bi bi-caret-down-fill float-end"></i>
+      </a>
+      <div class="collapse ps-3" id="eventsSubmenu">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Créer Événement</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Mettre à jour Événement</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Supprimer Événement</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Consulter Détails</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="bi bi-list-check"></i> Liste des Réservations
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Contenu principal -->
+<div id="content">
+  <header>
+    <h1 class="fw-bold text-success">Tableau de Bord</h1>
+    <p class="text-muted">Bienvenue dans le panneau d'administration. Gérez les comptes, événements et réservations ici.</p>
+  </header>
+
+  <!-- Exemple de contenu - cartes résumé -->
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-success">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-people-fill"></i> Clients Actifs</h5>
+          <p class="card-text fs-3 fw-bold text-success">128</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm border-success">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-calendar-event-fill"></i> Événements à venir</h5>
+          <p class="card-text fs-3 fw-bold text-success">12</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm border-success">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-ticket-fill"></i> Réservations</h5>
+          <p class="card-text fs-3 fw-bold text-success">345</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

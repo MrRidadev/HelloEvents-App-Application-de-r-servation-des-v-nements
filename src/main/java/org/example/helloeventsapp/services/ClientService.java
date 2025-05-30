@@ -1,6 +1,7 @@
 package org.example.helloeventsapp.services;
 
 import org.example.helloeventsapp.models.Client;
+import org.example.helloeventsapp.models.Reservation;
 import org.example.helloeventsapp.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,9 @@ public class ClientService {
 
     public Client updateClients( Client clients) {
         return clientRepository.save(clients);
+    }
+
+    public List<Reservation> findByReservation(String nom) {
+        return clientRepository.findByReservationByNom(nom);
     }
 }
